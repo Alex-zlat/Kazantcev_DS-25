@@ -1,0 +1,2 @@
+Файлы. Работа с файлами:
+https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html

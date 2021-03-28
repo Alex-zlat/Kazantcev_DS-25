@@ -1,0 +1,41 @@
+в 99% случаев если функция использует внешние данные, то задаем их в виде параметров
+какие данные функции нужны для ее решения внешние, такие аргументы и задаем, в данном случае это начальная дата и конечная, сама функция их не знает, их нужно передать
+
+def check_date_format(date):
+    """
+    Функция для проверки корректности формата времени. В качестве результата выдает True или False.
+    Корректными считается формат YYYY-MM-DD
+    date - дата в формате YYYY-MM-DD
+    """
+    valid_format = '%Y-%m-%d'
+    try:
+        datetime.strptime(date, valid_format)
+        return True
+    except:
+        return False
+
+
+
+
+def date_range(start_date, end_date):
+    """
+    Функция для получения списка дат из периода. 
+    start_date - начальная дата в формате YYYY-MM-DD
+    end_date - конечная дата в формате YYYY-MM-DD
+    Функция возвращает список дат.
+    Если формат параметров некорректный, а так же если start_date больше end_date, то функция вернет пустой список.
+    """
+    
+    if not check_date_format(start_date) or not check_date_format(end_date) or end_date < start_date:
+        return []
+    
+    start_date = datetime.strptime(start_date, '%Y-%m-%d')
+    end_date = datetime.strptime(end_date, '%Y-%m-%d')
+    
+    result = []
+    days_counter = (end_date - start_date).days
+    
+    for days in range(0, days_counter+1):
+        result += [datetime.strftime(start_date + timedelta(days), '%Y-%m-%d')]
+        
+    return result

@@ -1,0 +1,6 @@
+Всё о строках в Python: 
+https://zen.yandex.ru/media/id/5cab3ea044061700afead675/vse-o-strokah-v-python-5f60744e5622142b93b2031e
+
+Метод str.join() в Python, объединяет список строк: 
+https://docs-python.ru/tutorial/operatsii-tekstovymi-strokami-str-python/metod-str-join/
+

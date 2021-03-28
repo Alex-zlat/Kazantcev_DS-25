@@ -1,0 +1,7 @@
+1) Первые шаги с Fiddler Classic
+
+https://habr.com/ru/post/533138/
+
+2) Fiddler — помощник в отладке JavaScript
+
+https://habr.com/ru/post/140147/ 
